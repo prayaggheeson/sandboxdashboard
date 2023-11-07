@@ -11,10 +11,10 @@ import { tokens } from "../../theme";
 import { mockTransactions } from "../../data/mockData";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
-import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
-import TrafficIcon from "@mui/icons-material/Traffic";
 import Header from "../../components/Header";
 import LineChart from "../../components/LineChart";
 import GeographyChart from "../../components/GeographyChart";
@@ -139,11 +139,11 @@ const Dashboard = () => {
           >
             <StatBox
               title="431,225"
-              subtitle="Sales Obtained"
+              subtitle="Earning"
               progress="0.50"
               increase="+21%"
               icon={
-                <PointOfSaleIcon
+                <AttachMoneyIcon
                   sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
                 />
               }
@@ -181,11 +181,11 @@ const Dashboard = () => {
           >
             <StatBox
               title="1,325,134"
-              subtitle="Traffic Received"
+              subtitle="Accounts"
               progress="0.80"
               increase="+43%"
               icon={
-                <TrafficIcon
+                <AccountBalanceIcon
                   sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
                 />
               }
