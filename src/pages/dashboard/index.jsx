@@ -55,7 +55,28 @@ const Dashboard = () => {
       console.log(error);
     }
   };
+  const disconnectWallet = async () => {
+    try {
+      const { ethereum } = window;
 
+      if (!ethereum) {
+        alert("Get MetaMask!");
+        return;
+      }
+
+      const accounts = await ethereum.request({
+        method: "eth_requestAccounts",
+      });
+
+      alert("Disconnected");
+      setWalletAddress("");
+      console.log("Disconnected", accounts[0]);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  
   return (
     <Box m="20px">
       {/* HEADER */}
@@ -78,7 +99,7 @@ const Dashboard = () => {
 
         <Box>
           {walletAddress ? (
-            <Typography
+            <Button
               sx={{
                 backgroundColor: colors.blueAccent[700],
                 color: colors.grey[100],
@@ -86,9 +107,10 @@ const Dashboard = () => {
                 fontWeight: "bold",
                 padding: "10px 20px",
               }}
+              onClick={disconnectWallet}
             >
-              Wallet Connected
-            </Typography>
+              Wallet Disconnected
+            </Button>
           ) : (
             <Button
               sx={{
