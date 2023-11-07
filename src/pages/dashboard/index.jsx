@@ -10,7 +10,8 @@ import Grid from "@mui/material/Unstable_Grid2";
 import { tokens } from "../../theme";
 import { mockTransactions } from "../../data/mockData";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
-import EmailIcon from "@mui/icons-material/Email";
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+
 import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import TrafficIcon from "@mui/icons-material/Traffic";
@@ -20,11 +21,42 @@ import GeographyChart from "../../components/GeographyChart";
 import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
 import ProgressCircle from "../../components/ProgressCircle";
+import { useState } from "react";
+
 
 const Dashboard = () => {
+  const [walletAddress, setWalletAddress] = useState("");
   const theme = useTheme();
   const smScreen = useMediaQuery(theme.breakpoints.up("sm"));
   const colors = tokens(theme.palette.mode);
+
+  const connectWallet = async () => {
+    try {
+      const { ethereum } = window;
+
+      if (!ethereum) {
+        alert("Get MetaMask!");
+        return;
+      }
+
+      const accounts = await ethereum.request({
+        method: "eth_requestAccounts",
+      });
+
+      alert("Connected");
+      setWalletAddress(accounts[0]);
+      console.log("Connected", accounts[0]);
+
+      const balance = await ethereum.request({
+        method: "eth_getBalance",
+        params: [accounts[0], "latest"],
+      });
+      console.log(balance);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <Box m="20px">
       {/* HEADER */}
@@ -36,7 +68,7 @@ const Dashboard = () => {
         alignItems={smScreen ? "center" : "start"}
         m="10px 0"
       >
-        <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
+        <Header title="DASHBOARD" subtitle={walletAddress ? `Wallet Address: ${walletAddress.substring(0, 15)}` + "..." : "Not Connected"} />
 
         <Box>
           <Button
@@ -47,9 +79,10 @@ const Dashboard = () => {
               fontWeight: "bold",
               padding: "10px 20px",
             }}
+            onClick={connectWallet}
           >
-            <DownloadOutlinedIcon sx={{ mr: "10px" }} />
-            Download Reports
+           
+           Connect Wallet
           </Button>
         </Box>
       </Box>
@@ -66,11 +99,11 @@ const Dashboard = () => {
           >
             <StatBox
               title="12,361"
-              subtitle="Emails Sent"
+              subtitle="Active Users"
               progress="0.75"
               increase="+14%"
               icon={
-                <EmailIcon
+                <AccountCircleIcon
                   sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
                 />
               }
@@ -163,9 +196,10 @@ const Dashboard = () => {
                   <Typography
                     variant="h5"
                     fontWeight="600"
+                    paddingTop={2}
                     color={colors.grey[100]}
                   >
-                    Revenue Generated
+                    Quartely Revenue Generated
                   </Typography>
                   <Typography
                     variant="h5"
@@ -220,7 +254,7 @@ const Dashboard = () => {
                 fontWeight="600"
                 sx={{ padding: "30px 30px 0 30px" }}
               >
-                Sales Quantity
+                Sales 
               </Typography>
               <Box height="250px" mt="-20px">
                 <BarChart isDashboard={true} />

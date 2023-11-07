@@ -320,80 +320,80 @@ export const mockTransactions = [
 export const mockBarData = [
   {
     country: "AD",
-    "hot dog": 137,
-    "hot dogColor": "hsl(229, 70%, 50%)",
-    burger: 96,
-    burgerColor: "hsl(296, 70%, 50%)",
-    kebab: 72,
-    kebabColor: "hsl(97, 70%, 50%)",
-    donut: 140,
-    donutColor: "hsl(340, 70%, 50%)"
+    "Earning": 137,
+    "EarningColor": "hsl(229, 70%, 50%)",
+    Bonus: 96,
+    BonusColor: "hsl(296, 70%, 50%)",
+    Staking: 72,
+    StakingColor: "hsl(97, 70%, 50%)",
+    Referral: 140,
+    ReferralColor: "hsl(340, 70%, 50%)"
   },
   {
     country: "AE",
-    "hot dog": 55,
-    "hot dogColor": "hsl(307, 70%, 50%)",
-    burger: 28,
-    burgerColor: "hsl(111, 70%, 50%)",
-    kebab: 58,
-    kebabColor: "hsl(273, 70%, 50%)",
-    donut: 29,
-    donutColor: "hsl(275, 70%, 50%)"
+    "Earning": 55,
+    "EarningColor": "hsl(307, 70%, 50%)",
+    Bonus: 28,
+    BonusColor: "hsl(111, 70%, 50%)",
+    Staking: 58,
+    StakingColor: "hsl(273, 70%, 50%)",
+    Referral: 29,
+    ReferralColor: "hsl(275, 70%, 50%)"
   },
   {
     country: "AF",
-    "hot dog": 109,
-    "hot dogColor": "hsl(72, 70%, 50%)",
-    burger: 23,
-    burgerColor: "hsl(96, 70%, 50%)",
-    kebab: 34,
-    kebabColor: "hsl(106, 70%, 50%)",
-    donut: 152,
-    donutColor: "hsl(256, 70%, 50%)"
+    "Earning": 109,
+    "EarningColor": "hsl(72, 70%, 50%)",
+    Bonus: 23,
+    BonusColor: "hsl(96, 70%, 50%)",
+    Staking: 34,
+    StakingColor: "hsl(106, 70%, 50%)",
+    Referral: 152,
+    ReferralColor: "hsl(256, 70%, 50%)"
   },
   {
     country: "AG",
-    "hot dog": 133,
-    "hot dogColor": "hsl(257, 70%, 50%)",
-    burger: 52,
-    burgerColor: "hsl(326, 70%, 50%)",
-    kebab: 43,
-    kebabColor: "hsl(110, 70%, 50%)",
-    donut: 83,
-    donutColor: "hsl(9, 70%, 50%)"
+    "Earning": 133,
+    "EarningColor": "hsl(257, 70%, 50%)",
+    Bonus: 52,
+    BonusColor: "hsl(326, 70%, 50%)",
+    Staking: 43,
+    StakingColor: "hsl(110, 70%, 50%)",
+    Referral: 83,
+    ReferralColor: "hsl(9, 70%, 50%)"
   },
   {
     country: "AI",
-    "hot dog": 81,
-    "hot dogColor": "hsl(190, 70%, 50%)",
-    burger: 80,
-    burgerColor: "hsl(325, 70%, 50%)",
-    kebab: 112,
-    kebabColor: "hsl(54, 70%, 50%)",
-    donut: 35,
-    donutColor: "hsl(285, 70%, 50%)"
+    "Earning": 81,
+    "EarningColor": "hsl(190, 70%, 50%)",
+    Bonus: 80,
+    BonusColor: "hsl(325, 70%, 50%)",
+    Staking: 112,
+    StakingColor: "hsl(54, 70%, 50%)",
+    Referral: 35,
+    ReferralColor: "hsl(285, 70%, 50%)"
   },
   {
     country: "AL",
-    "hot dog": 66,
-    "hot dogColor": "hsl(208, 70%, 50%)",
-    burger: 111,
-    burgerColor: "hsl(334, 70%, 50%)",
-    kebab: 167,
-    kebabColor: "hsl(182, 70%, 50%)",
-    donut: 18,
-    donutColor: "hsl(76, 70%, 50%)"
+    "Earning": 66,
+    "EarningColor": "hsl(208, 70%, 50%)",
+    Bonus: 111,
+    BonusColor: "hsl(334, 70%, 50%)",
+    Staking: 167,
+    StakingColor: "hsl(182, 70%, 50%)",
+    Referral: 18,
+    ReferralColor: "hsl(76, 70%, 50%)"
   },
   {
     country: "AM",
-    "hot dog": 80,
-    "hot dogColor": "hsl(87, 70%, 50%)",
-    burger: 47,
-    burgerColor: "hsl(141, 70%, 50%)",
-    kebab: 158,
-    kebabColor: "hsl(224, 70%, 50%)",
-    donut: 49,
-    donutColor: "hsl(274, 70%, 50%)"
+    "Earning": 80,
+    "EarningColor": "hsl(87, 70%, 50%)",
+    Bonus: 47,
+    BonusColor: "hsl(141, 70%, 50%)",
+    Staking: 158,
+    StakingColor: "hsl(224, 70%, 50%)",
+    Referral: 49,
+    ReferralColor: "hsl(274, 70%, 50%)"
   }
 ];
 
@@ -436,51 +436,51 @@ export const mockLineData = [
     color: tokens("dark").greenAccent[500],
     data: [
       {
-        x: "plane",
+        x: "Janurary",
         y: 101
       },
       {
-        x: "helicopter",
+        x: "Feburary",
         y: 75
       },
       {
-        x: "boat",
+        x: "March",
         y: 36
       },
       {
-        x: "train",
+        x: "Aprill",
         y: 216
       },
       {
-        x: "subway",
+        x: "May",
         y: 35
       },
       {
-        x: "bus",
+        x: "June",
         y: 236
       },
       {
-        x: "car",
+        x: "July",
         y: 88
       },
       {
-        x: "moto",
+        x: "August",
         y: 232
       },
       {
-        x: "bicycle",
+        x: "September",
         y: 281
       },
       {
-        x: "horse",
+        x: "October",
         y: 1
       },
       {
-        x: "skateboard",
+        x: "November",
         y: 35
       },
       {
-        x: "others",
+        x: "December",
         y: 14
       }
     ]
@@ -490,51 +490,51 @@ export const mockLineData = [
     color: tokens("dark").blueAccent[300],
     data: [
       {
-        x: "plane",
+        x: "Janurary",
         y: 212
       },
       {
-        x: "helicopter",
+        x: "Feburary",
         y: 190
       },
       {
-        x: "boat",
+        x: "March",
         y: 270
       },
       {
-        x: "train",
+        x: "Aprill",
         y: 9
       },
       {
-        x: "subway",
+        x: "May",
         y: 75
       },
       {
-        x: "bus",
+        x: "June",
         y: 175
       },
       {
-        x: "car",
+        x: "July",
         y: 33
       },
       {
-        x: "moto",
+        x: "August",
         y: 189
       },
       {
-        x: "bicycle",
+        x: "September",
         y: 97
       },
       {
-        x: "horse",
+        x: "October",
         y: 87
       },
       {
-        x: "skateboard",
+        x: "November",
         y: 299
       },
       {
-        x: "others",
+        x: "December",
         y: 251
       }
     ]
@@ -544,51 +544,51 @@ export const mockLineData = [
     color: tokens("dark").redAccent[200],
     data: [
       {
-        x: "plane",
+        x: "Janurary",
         y: 191
       },
       {
-        x: "helicopter",
+        x: "Feburary",
         y: 136
       },
       {
-        x: "boat",
+        x: "March",
         y: 91
       },
       {
-        x: "train",
+        x: "Aprill",
         y: 190
       },
       {
-        x: "subway",
+        x: "May",
         y: 211
       },
       {
-        x: "bus",
+        x: "June",
         y: 152
       },
       {
-        x: "car",
+        x: "July",
         y: 189
       },
       {
-        x: "moto",
+        x: "August",
         y: 152
       },
       {
-        x: "bicycle",
+        x: "September",
         y: 8
       },
       {
-        x: "horse",
+        x: "October",
         y: 197
       },
       {
-        x: "skateboard",
+        x: "November",
         y: 107
       },
       {
-        x: "others",
+        x: "December",
         y: 170
       }
     ]
