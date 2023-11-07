@@ -10,7 +10,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import { tokens } from "../../theme";
 import { mockTransactions } from "../../data/mockData";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
@@ -22,7 +22,6 @@ import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
 import ProgressCircle from "../../components/ProgressCircle";
 import { useState } from "react";
-
 
 const Dashboard = () => {
   const [walletAddress, setWalletAddress] = useState("");
@@ -68,22 +67,42 @@ const Dashboard = () => {
         alignItems={smScreen ? "center" : "start"}
         m="10px 0"
       >
-        <Header title="DASHBOARD" subtitle={walletAddress ? `Wallet Address: ${walletAddress.substring(0, 15)}` + "..." : "Not Connected"} />
+        <Header
+          title="DASHBOARD"
+          subtitle={
+            walletAddress
+              ? `Wallet Address: ${walletAddress.substring(0, 15)}....` 
+              : "Not Connected"
+          }
+        />
 
         <Box>
-          <Button
-            sx={{
-              backgroundColor: colors.blueAccent[700],
-              color: colors.grey[100],
-              fontSize: "14px",
-              fontWeight: "bold",
-              padding: "10px 20px",
-            }}
-            onClick={connectWallet}
-          >
-           
-           Connect Wallet
-          </Button>
+          {walletAddress ? (
+            <Typography
+              sx={{
+                backgroundColor: colors.blueAccent[700],
+                color: colors.grey[100],
+                fontSize: "14px",
+                fontWeight: "bold",
+                padding: "10px 20px",
+              }}
+            >
+              Wallet Connected
+            </Typography>
+          ) : (
+            <Button
+              sx={{
+                backgroundColor: colors.blueAccent[700],
+                color: colors.grey[100],
+                fontSize: "14px",
+                fontWeight: "bold",
+                padding: "10px 20px",
+              }}
+              onClick={connectWallet}
+            >
+              Connect Wallet
+            </Button>
+          )}
         </Box>
       </Box>
 
@@ -254,7 +273,7 @@ const Dashboard = () => {
                 fontWeight="600"
                 sx={{ padding: "30px 30px 0 30px" }}
               >
-                Sales 
+                Sales
               </Typography>
               <Box height="250px" mt="-20px">
                 <BarChart isDashboard={true} />
